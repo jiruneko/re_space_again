@@ -40,3 +40,34 @@ body {
 .bg-drift {
   animation: slow-drift 60s ease-in-out infinite;
 }
+
+@keyframes float-up-fade {
+  0% {
+    transform: translate3d(var(--x, 0px), 18px, 0) scale(0.98);
+    opacity: 0;
+    filter: blur(0.6px);
+  }
+  15% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+  100% {
+    transform: translate3d(var(--x, 0px), -140px, 0) scale(1.02);
+    opacity: 0;
+    filter: blur(0.6px);
+  }
+}
+
+.float-message {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  animation: float-up-fade 2.2s ease-out forwards;
+  pointer-events: none;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  will-change: transform, opacity, filter;
+}
