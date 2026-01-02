@@ -1,5 +1,5 @@
-import Bgm from "@/components/Bgm";
-import Greeting from "@/components/Greeting";
+import Bgm from "../components/Bgm";
+import Greeting from "../components/Greeting";
 
 export default function Home() {
   return (
